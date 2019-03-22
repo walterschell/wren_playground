@@ -1,0 +1,3 @@
+add_library(wren_module_readline STATIC readline/wren_module_readline.c)
+target_include_directories(wren_module_readline PUBLIC "readline")
+target_link_libraries(wren_module_readline PUBLIC wren wauxlib readline)
