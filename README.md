@@ -19,4 +19,4 @@ Playground for testing possible new wren features
 5. Needs porting to make from CMake
 6. Needs documentation
 7. Needs commenting
-
+8. Path manipulation is best described as linux only and barely working
