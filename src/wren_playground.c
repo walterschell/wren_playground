@@ -4,6 +4,8 @@
 #include <wren.h>
 #include <wauxlib.h>
 #include <wren_module_readline.h>
+#include <dlfcn.h>
+
 
 void wren_print_error(
     WrenVM* vm, WrenErrorType type, const char* module, int line,
@@ -54,6 +56,7 @@ int main(int argc, char *argv[])
     WrenConfiguration config;
     WauxlibBinderCtx *binderCtx = defaultBinderNew();
     wren_module_readline_register(binderCtx);
+
     wrenInitConfiguration(&config);
     config.bindForeignClassFn = defaultBinderBindForeignClassFn;
     config.bindForeignMethodFn = defaultBinderBindForeignMethodFn;

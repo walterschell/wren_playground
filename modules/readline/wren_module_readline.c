@@ -4,13 +4,11 @@
 #include <readline/readline.h>
 #include <readline/history.h>
 
-
-
 static const char *readlineModuleSource = \
-"class readline { \
-    foreign static prompt(message) \
-} \
-";
+"class readline { \n"
+"    foreign static prompt(message) \n"
+"} \n"
+;
 
  static void wren_readline_prompt(WrenVM *vm)
 {
@@ -34,3 +32,4 @@ void wren_module_readline_register(WauxlibBinderCtx *binderCtx)
 {
     defaultBinderAddModule(binderCtx, "readline", NULL, (void *) readlineModuleSource, NULL, NULL, module_readline);
 }
+
