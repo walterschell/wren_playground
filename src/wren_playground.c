@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
         return -2;
     }
     //TODO: Fix this
-    char program[4096];
+    char program[4096] = {};
     fread(program, 1, 4095, fh);
     fclose(fh);
     
@@ -75,6 +75,6 @@ int main(int argc, char *argv[])
     {
         printf("Program failed to run\n");
     }
-    defaultBinderDelete(binderCtx);
     wrenFreeVM(vm);  
+    defaultBinderDelete(binderCtx);
 }

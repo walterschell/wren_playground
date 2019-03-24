@@ -30,6 +30,6 @@ static ModuleRegistry module_readline[] = {
 
 void wren_module_readline_register(WauxlibBinderCtx *binderCtx)
 {
-    defaultBinderAddModule(binderCtx, "readline", NULL, (void *) readlineModuleSource, NULL, NULL, module_readline);
+    defaultBinderAddModuleSimple(binderCtx, "readline", readlineModuleSource, module_readline);
 }
 

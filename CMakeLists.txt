@@ -27,5 +27,6 @@ function(add_wrenfile wrenfile)
 endfunction(add_wrenfile wrenfile)
 
 
-add_wrenfile(wren_scripts/demo_readline.wren)
-add_wrenfile(wren_scripts/demo_shell.wren)
+#add_wrenfile(wren_scripts/demo_readline.wren)
+#add_wrenfile(wren_scripts/demo_shell.wren)
+add_wrenfile(wren_scripts/combined_demo.wren)

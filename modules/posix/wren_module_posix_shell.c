@@ -85,12 +85,10 @@ void wren_Shell_write_stdin(WrenVM *vm)
 
 void wren_Shell_read_stdout(WrenVM *vm)
 {
-    printf("Reading stdout\n");
     char buffer[4096];
     int buffer_size;
     wren_Shell_data_t *ctx = wrenGetSlotForeign(vm, 0);
     buffer_size = read(ctx->stdout_fd, buffer, sizeof(buffer));
-    printf("Read complete\n");
     if (buffer_size < 0)
     {
         wrenSetSlotString(vm, 0, "Unable to read from shell");
