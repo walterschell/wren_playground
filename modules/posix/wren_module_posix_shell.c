@@ -5,7 +5,9 @@
 #include <signal.h>
 #include <stdio.h>
 #include "wren_module_posix_int.h"
-
+#ifndef __environ
+extern char **__environ;
+#endif
 
 typedef struct 
 {
